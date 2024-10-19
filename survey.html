@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Temel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Başlık ve navigasyon */
+        header {
+            background-color: #3f5dcb;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .rating-group {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        .rating-group label {
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 50%;
+        }
+        .rating-group label:hover {
+            background-color: #ddd;
+        }
+        button {
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Alt bilgi */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Anasayfa</a></li>
+                <li><a href="/about.html">Hakkımda</a></li>
+                <li><a href="/contact.html">İletişim</a></li>
+                <li><a href="/survey.html">Anket</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Genel Memnuniyet Anketi</h2>
+        <p>Lütfen aşağıdaki soruları yanıtlayarak bize geri bildirimde bulunun. Anket sonuçları, hizmetlerimizi geliştirmemize yardımcı olacaktır.</p>
+    
+        <form action="#" method="POST">
+            <!-- Ad ve E-posta -->
+            <div class="question">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+            </div>
+    
+            <div class="question">
+                <label for="email">E-posta Adresiniz:</label>
+                <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+            </div>
+    
+            <!-- Memnuniyet Derecesi (Basit radyo düğmeleri) -->
+            <div class="question">
+                <label>Hizmetlerimizden genel olarak ne kadar memnunsunuz?</label>
+                <div class="rating-group">
+                    <label><input type="radio" name="rating" value="1" required> 1</label>
+                    <label><input type="radio" name="rating" value="2"> 2</label>
+                    <label><input type="radio" name="rating" value="3"> 3</label>
+                    <label><input type="radio" name="rating" value="4"> 4</label>
+                    <label><input type="radio" name="rating" value="5"> 5</label>
+                </div>
+            </div>
+    
+            <!-- Hizmet İyileştirmeleri -->
+            <div class="question">
+                <label for="feedback">Geliştirilmesini istediğiniz herhangi bir alan var mı?</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Yorumlarınızı buraya yazın..."></textarea>
+            </div>
+    
+            <!-- Hangi ürünler kullanıldı -->
+            
+    
+            <!-- Şikayet -->
+            <div class="question">
+                <label>Herhangi bir şikayetiniz var mı?</label>
+                <div>
+                    <label><input type="radio" name="complaint" value="Evet" required> Evet</label>
+                    <label><input type="radio" name="complaint" value="Hayır"> Hayır</label>
+                </div>
+            </div>
+    
+            <!-- Gönder butonu -->
+            <button type="submit">Gönder</button><br/><br/><br/><br/><br/>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Blog Sitem. Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+</html>
